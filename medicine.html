@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Medicines</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>💊 Order Medicines</h1>
+<p style="text-align:center;">Nearby medical stores</p>
+
+<div class="product-grid">
+
+    <div class="product-card">
+        <img src="paracetamol.jpg" alt="Paracetamol">
+        <h3>Paracetamol</h3>
+        <p>Fever & Pain Relief</p>
+        <p class="price">₹49</p>
+        <button onclick="addToCart('Paracetamol', 49)">Add to cart</button>
+
+
+        <button class="buy-btn" onclick="buyNow('Paracetamol')">Buy Now</button>
+
+    </div>
+
+    <div class="product-card">
+        <img src="cough.jpg" alt="Cough Syrup">
+        <h3>Cough Syrup</h3>
+        <p>Cold & Cough</p>
+        <p class="price">₹89</p>
+        
+        <button onclick="addToCart('Cough syrup', 50)">Add to cart</button>
+
+
+        <button class="buy-btn" onclick="buyNow('Cough Syrup')">Buy Now</button>
+
+    </div>
+
+    <div class="product-card">
+        <img src="vitaminc.jpg" alt="Vitamin C">
+        <h3>Vitamin C</h3>
+        <p>Immunity Booster</p>
+        <p class="price">₹120</p>
+        <button onclick="addToCart('vitamin C', 49)">Add to cart</button>
+
+        <button class="buy-btn" onclick="buyNow('BP Tablets')">Buy Now</button>
+
+    </div>
+
+    <div class="product-card">
+        <img src="bp.jpg" alt="BP Tablets">
+        <h3>BP Tablets</h3>
+        <p>Blood Pressure Control</p>
+        <p class="price">₹150</p>
+
+        <button onclick="addToCart('BP Tablets', 49)">Add to cart</button>
+
+
+        <button class="buy-btn" onclick="buyNow('BP Tablets')">Buy Now</button>
+
+    </div>
+    <div class="back-btn-container">
+    <button class="back-btn" onclick="window.location.href='index.html'">
+        ⬅ Back to Home
+    </button>
+    <script>
+function buyNow(product) {
+    alert("🛒 Buying " + product + " now");
+    // later you can redirect to payment page
+    // window.location.href = "payment.html";
+}
+</script>
+<script src="medicine.js"></script>
+
+
+</div>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
+

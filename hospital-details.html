@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Details</title>
+    <link rel="stylesheet" href="hospital.css">
+</head>
+<body>
+
+<h2>🏥 Hospital Details</h2>
+
+<p><strong>Name:</strong> Apollo Hospital</p>
+<p><strong>Distance:</strong> 2.3 km</p>
+
+<h3>Available Equipment</h3>
+
+<ul>
+    <li>✅ ICU Beds</li>
+    <li>✅ Oxygen Cylinders</li>
+    <li>❌ Ventilators</li>
+    <li>✅ Ambulance</li>
+</ul>
+
+<h3>Nearby Medical Stores</h3>
+<ul>
+    <li>💊 Apollo Pharmacy – 200m</li>
+    <li>💊 MedPlus – 350m</li>
+</ul>
+
+<button onclick="goBack()">⬅ Back</button>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+<h3>Patient Reviews</h3>
+
+<p>⭐ ⭐ ⭐ ⭐ ☆ (4.2)</p>
+
+<textarea placeholder="Write your review"></textarea><br><br>
+<button onclick="submitReview()">Submit Review</button>
+
+<script>
+function submitReview() {
+    alert("Thank you for your review!");
+}
+</script>
+
+
+</body>
+</html>

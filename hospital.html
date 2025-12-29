@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nearby Hospitals</title>
+    <link rel="stylesheet" href="hospital.css">
+</head>
+<body>
+
+<h2>🏥 Find Nearby Hospitals & Medical Stores</h2>
+
+<input type="text" id="locationInput" placeholder="Enter place name">
+<button onclick="searchLocation()">Search</button>
+
+<!-- MAP -->
+<div id="mapContainer"></div>
+
+<!-- RESULTS -->
+
+<div id="hospitalList"></div>
+
+<ul id="medicalList"></ul>
+
+<div class="back-btn-container">
+    <button class="back-btn" onclick="window.location.href='index.html'">
+        ⬅ Back to Home
+    </button>
+
+<script src="hospital.js"></script>
+</body>
+</html>

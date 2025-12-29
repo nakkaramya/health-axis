@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Profile</title>
+    <link rel="stylesheet" href="doctor-profile.css">
+</head>
+<body>
+
+<div class="profile-container">
+
+    <img src="https://via.placeholder.com/200" class="doctor-photo">
+
+    <h2>Dr. Ananya Rao</h2>
+    <p class="specialization">Cardiologist</p>
+
+    <div class="info">
+        <p><b>Experience:</b> 12 Years</p>
+        <p><b>Hospital:</b> Apollo Hospital</p>
+        <p><b>Timings:</b> 10:00 AM – 5:00 PM</p>
+        <p><b>Availability:</b> ✅ Available Today</p>
+    </div>
+    
+    <button type="button" class="book-btn" onclick="openBooking()">
+    📅 Book Appointment</button>
+    <div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <h3>Book Appointment</h3>
+
+        <input type="text" placeholder="Your Name" id="name">
+        <input type="tel" placeholder="Phone Number" id="phone">
+        <input type="date" id="date">
+        <input type="time" id="time">
+
+        <button class="confirm-btn" onclick="confirmBooking()">Confirm</button>
+        <button class="close-btn" onclick="closeBooking()">Cancel</button>
+    </div>
+</div>
+
+
+
+    <h3>Patient Reviews</h3>
+
+    <div class="review">
+        ⭐⭐⭐⭐⭐  
+        <p>Very kind and professional doctor.</p>
+    </div>
+
+    <div class="review">
+        ⭐⭐⭐⭐☆  
+        <p>Explained treatment clearly.</p>
+    </div>
+
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+
+</div>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+<script>
+function openBooking() {
+    document.getElementById("bookingModal").style.display = "block";
+}
+
+function closeBooking() {
+    document.getElementById("bookingModal").style.display = "none";
+}
+
+function confirmBooking() {
+    alert("✅ Appointment booked successfully!");
+    closeBooking();
+}
+</script>
+
+
+
+
+</body>
+</html>

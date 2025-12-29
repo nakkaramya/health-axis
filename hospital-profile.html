@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Profile</title>
+    <link rel="stylesheet" href="hospital.css">
+</head>
+<body>
+
+<h2>🏥 City Care Hospital</h2>
+<p>📍 Location: Near Main Road</p>
+
+<hr>
+
+<h3>🧰 Available Equipment</h3>
+<ul>
+    <li>Ventilator – Available</li>
+    <li>Oxygen Cylinders – Available</li>
+    <li>ICU Beds – 5 Available</li>
+    <li>ECG Machine – Available</li>
+</ul>
+
+<hr>
+
+<h3>💊 Nearby Medical Stores</h3>
+<ul>
+    <li>MedPlus Pharmacy (200m)</li>
+    <li>Apollo Pharmacy (350m)</li>
+    <li>Local Medical Store (100m)</li>
+</ul>
+
+<hr>
+
+<h3>⭐ Give Your Review</h3>
+
+<textarea id="review" placeholder="Write your review..." rows="4"></textarea><br><br>
+
+<select id="rating">
+    <option>⭐</option>
+    <option>⭐⭐</option>
+    <option>⭐⭐⭐</option>
+    <option>⭐⭐⭐⭐</option>
+    <option>⭐⭐⭐⭐⭐</option>
+</select>
+
+<br><br>
+
+<button onclick="submitReview()">Submit Review</button>
+
+<p id="msg"></p>
+
+<br>
+
+<button class="back-btn" onclick="goBack()">⬅ Back</button>
+
+<script>
+function submitReview() {
+    document.getElementById("msg").innerText =
+        "✅ Review submitted successfully!";
+}
+
+function goBack() {
+    window.location.href = "hospital.html";
+}
+</script>
+
+</body>
+</html>

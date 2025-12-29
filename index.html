@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HealthConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🏥 HealthConnect</h1>
+<p style="text-align:center;">Smart Healthcare Platform</p>
+
+<div class="feature-grid">
+
+    <!-- Emergency AI -->
+    <div class="feature-card">
+        <img src="emergency.jpg" alt="Emergency AI">
+        <h3>🚨 Emergency AI</h3>
+        <p>Send alerts to nearby hospitals instantly</p>
+        <a href="emergency.html"><button>Go</button></a>
+    </div>
+
+    <!-- Find Doctor -->
+    <div class="feature-card">
+        <img src="doctor.jpg" alt="Find Doctor">
+        <h3>👨‍⚕️ Find Doctor</h3>
+        <p>Search for doctors near you</p>
+        <a href="doctor.html"><button>Go</button></a>
+    </div>
+
+    <!-- Nearby Hospitals -->
+    <div class="feature-card">
+        <img src="hospital.jpg" alt="Nearby Hospitals">
+        <h3>🏥 Nearby Hospitals</h3>
+        <p>Check hospital availability and equipment</p>
+        <a href="hospital.html"><button>Go</button></a>
+    </div>
+
+    <!-- Order Medicines -->
+    <div class="feature-card">
+        <img src="medicine.jpg" alt="Order Medicines">
+        <h3>💊 Order Medicines</h3>
+        <p>Book medicines from nearby stores</p>
+        <a href="medicine.html"><button>Go</button></a>
+    </div>
+
+</div>
+
+<!-- Diet Plan AI Board -->
+<section class="diet-plan-cards">
+    <h2>🍎 Personalized Diet Plan</h2>
+    <p>Get a suggested diet plan based on your goal:</p>
+
+    <div class="diet-inputs">
+        <input type="text" id="diet-name" placeholder="Your Name">
+        <input type="number" id="diet-age" placeholder="Age">
+        <select id="diet-goal">
+            <option value="weight_loss">Weight Loss</option>
+            <option value="muscle_gain">Muscle Gain</option>
+            <option value="diabetic">Diabetic Friendly</option>
+            <option value="heart_health">Heart Health</option>
+        </select>
+        <button onclick="showDietPlan()">Get Diet Plan</button>
+    </div>
+
+    <div class="diet-cards" id="diet-output">
+        <!-- Diet cards will appear here -->
+    </div>
+</section>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

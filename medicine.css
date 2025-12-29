@@ -1,0 +1,95 @@
+/* Medicine page grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;           /* allow cards to wrap */
+    justify-content: center;   /* center horizontally */
+    gap: 15px;                 /* space between cards */
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* Individual product cards */
+.product-card {
+    background: white;
+    width: 180px;              /* fixed width */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+/* Hover effect */
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* Images inside product cards */
+.product-card img {
+    width: 100%;          /* fills card width */
+    max-width: 120px;     /* maximum width */
+    height: 120px;        /* fixed height */
+    object-fit: contain;  /* keeps aspect ratio without stretching */
+    margin: 0 auto;       /* center horizontally */
+    display: block;
+    border-radius: 6px;
+}
+
+/* Titles */
+.product-card h3 {
+    margin: 8px 0 4px;
+    font-size: 16px;
+}
+
+/* Descriptions */
+.product-card p {
+    margin: 2px 0;
+    font-size: 14px;
+}
+
+/* Price */
+.price {
+    font-weight: bold;
+    color: green;
+}
+
+/* Button */
+.product-card button {
+    width: 100%;
+    padding: 8px;
+    background: #ffd814;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.product-card button:hover {
+    background: #f0c14b;
+}
+.cart-btn {
+    width: 100%;
+    padding: 10px;
+    background: #FFD814;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buy-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px;
+    background: #28a745;   /* Green */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buy-btn:hover {
+    background: #28a745;;
+}
+

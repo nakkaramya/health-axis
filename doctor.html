@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Doctors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>👨‍⚕️ Find Doctors</h1>
+<p>Book appointments with trusted specialists</p>
+
+<div class="doctor-grid">
+    <div class="doctor-card" onclick="openDoctor('dr-ananya')">
+    <img src="https://randomuser.me/api/portraits/women/45.jpg">
+
+    <h3>Dr. Ananya Rao</h3>
+    <p>Cardiologist</p>
+    <p>⭐ 4.8 (120 reviews)</p>
+    <button onclick="bookDoctor()"></button>
+</div>
+
+
+
+    <!-- Doctor 2 -->
+    <div class="doctor-card" onclick="openDoctor('dr-ananya')">
+    <img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+        <h3>Dr. Ravi Kumar</h3>
+        <p>Neurologist</p>
+        <p>Experience: 8 years</p>
+        <p>⭐ 4.6 (95 reviews)</p>
+        <button onclick="bookDoctor()"></button>
+    </div>
+
+
+    <!-- Doctor 3 -->
+    <div class="doctor-card" onclick="openDoctor('dr-ananya')">
+    <img src="https://randomuser.me/api/portraits/women/68.jpg">
+
+        <h3>Dr. Meera Patel</h3>
+        <p>General Physician</p>
+        <p>Experience: 6 years</p>
+        <p>⭐ 4.7 (80 reviews)</p>
+        <button onclick="bookDoctor()"></button>
+    </div>
+
+</div>
+
+
+<div class="back-btn-container">
+    <button class="back-btn" onclick="window.location.href='index.html'">
+        ⬅ Back to Home
+    </button>
+
+
+<script src="script.js"></script>
+<script>
+function openDoctor(id) {
+    window.location.href = "doctor-profile.html?doctor=" + id;
+}
+</script>
+
+</body>
+</html>

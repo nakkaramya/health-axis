@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emergency Help</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="emergency-container">
+
+    <h1>🚨 Emergency Help</h1>
+    <p class="sub-text">Press SOS in case of accident or medical emergency</p>
+
+    <!-- Pulsing SOS Button -->
+    <button id="sos-btn" onclick="handleSOS()">SOS</button>
+
+
+    <p id="sos-msg" class="alert-msg"></p>
+
+
+    <!-- Map -->
+    <div id="map" style="height: 300px; width: 100%; margin-top: 20px;"></div>
+    <div class="back-btn-container">
+    <button class="back-btn" onclick="window.location.href='index.html'">
+        ⬅ Back to Home
+    </button>
+
+
+    <!-- Your script -->
+    <script src="script.js"></script>
+
+    <!-- Google Maps script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzQi_gUsU33HqsQnjxfceLBL2-uU3LvY4&callback=initMap" async defer></script>
+    <div class="bottom-nav">
+    
+
+<script>
+
+async function handleSOS() {
+    // Get user location
+    if (!navigator.geolocation) {
+        alert("Geolocation not supported");
+        return;
+    }
+
+    navigator.geolocation.getCurrentPosition(async (position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+        try {
+            const res = await fetch("http://localhost:3000/send-sos", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ latitude, longitude })
+            });
+
+            const data = await res.json();
+            if (data.success) {
+                document.getElementById("sos-msg").textContent = "SOS sent to parents & nearby hospitals!";
+            } else {
+                document.getElementById("sos-msg").textContent = "sending msg to nearby hospitals and parents.";
+            }
+        } catch (err) {
+            console.error(err);
+            document.getElementById("sos-msg").textContent = "Error sending SOS.";
+        }
+    });
+}
+
+// Add event listener
+document.getElementById("sos-btn").addEventListener("click", handleSOS);
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
