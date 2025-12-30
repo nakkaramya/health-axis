@@ -1,9 +1,4 @@
 
-
-/
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);// Emergency button logic
 function emergencyAI() {
     alert("🚨 Emergency Alert Sent!\nNearby hospitals & parents notified.");
 }
@@ -238,5 +233,6 @@ function showDietPlan() {
 function goHome() {
     window.location.href = "index.html";
 }
+
 
 
